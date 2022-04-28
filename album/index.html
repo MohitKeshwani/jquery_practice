@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Album</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+              <td><img id="one" src="1.jpg" height="500" width="500"></td>
+              <td><img id="two" src="2.jpg" height="500" width="500"></td>
+              <td><img id="three" src="3.jpg" height="500" width="500"></td>
+            </tr>
+            <tr>
+              <td><img id="four" src="4.jpg" height="500" width="500"></td>
+              <td><img id="five" src="5.jpg" height="500" width="500"></td>
+              <td id="uniq"><img id="six" src="6.jpg" height="500" width="500"></td>
+            </tr>
+          </table>
+    </body>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log("hii")
+            $('#one').dblclick(function() {
+                $('#one').hide();
+            })
+            $('#two').dblclick(function() {
+                $('#two').fadeOut(3000).fadeIn(3000);
+
+            })
+            $('#three').dblclick(function() {
+                $('#three').slideUp(3000).slideDown(3000);
+            })
+            $('#four').dblclick(function() {
+                $('#four').animate({height: '300px', opacity: '0.4'}, "slow");
+            })
+            $('#five').mouseenter(function() {
+                alert("You touched the fifth flower")
+            })
+            $('#uniq').click(function() {
+                $('#six').attr('src' , '2.jpg');
+            })
+
+
+            
+
+        })
+        
+
+    </script>
+</html>
